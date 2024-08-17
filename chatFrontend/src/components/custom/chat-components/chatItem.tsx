@@ -23,4 +23,6 @@ const ChatItem = ({ name, message, days }:chatItemProps) => (
   </div>
 );
 
+
+
 export default ChatItem;

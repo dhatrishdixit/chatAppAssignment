@@ -7,12 +7,11 @@ const FilterTabs = () => (
       <Button 
         key={tab} 
         variant={tab === 'All' ? 'default' : 'ghost'}
-        className="text-sm"
+        className={`text-sm rounded-full ${tab === 'All' ? 'bg-primary text-primary-foreground' : ''}`}
       >
         {tab}
       </Button>
     ))}
   </div>
 );
-
 export default FilterTabs;
