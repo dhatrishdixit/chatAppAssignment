@@ -7,8 +7,8 @@ const ChatHeader = () => {
     // handle status change logic here
   }
   return (
-    <div className='flex items-center justify-end'>
-    <div className="flex items-center space-x-4 p-4 border-b h-16">
+    <div className='flex items-center justify-between space-x-4 p-4'>
+    <div className="flex items-center space-x-4 border-b h-16">
       <Avatar>
         <AvatarImage src="https://api.dicebear.com/6.x/initials/svg?seed=Kristine" />
         <AvatarFallback>K</AvatarFallback>

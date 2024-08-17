@@ -16,7 +16,7 @@ const ChatArea = () => {
   return (
     <div className="flex flex-col h-[calc(100vh-64px)]">
       <ChatHeader />
-      <ScrollArea className="flex-grow p-4">
+      <ScrollArea className="flex-grow px-4 py-2">
         {messages.map((msg, index) => (
           <ChatMessage key={index} {...msg} />
         ))}
