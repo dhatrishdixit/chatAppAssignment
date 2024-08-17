@@ -1,4 +1,3 @@
-
 import { Outlet, useNavigate } from 'react-router-dom'
 import './App.css'
 import Header from './components/custom/header'
@@ -21,21 +20,23 @@ function App() {
   if (!isLoaded) {
     return <div className='h-screen w-full flex justify-center items-center'>
       <ColorRing
-    visible={true}
-    height="80"
-    width="80"
-    ariaLabel="color-ring-loading"
-    wrapperStyle={{}}
-    wrapperClass="color-ring-wrapper"
-    colors={['#f97316','#f97316','#f97316','#f97316','#f97316']}
-    />
-    </div>; // Or some loading spinner
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="color-ring-loading"
+        wrapperStyle={{}}
+        wrapperClass="color-ring-wrapper"
+        colors={['#f97316','#f97316','#f97316','#f97316','#f97316']}
+      />
+    </div>;
   }
 
   return (
-    <div>
-       <Header/>
-       <Chat/>
+    <div className="h-screen flex flex-col">
+      <Header /> {/* Ensure the header has a height of 64px */}
+      <div className="flex-1">
+        <Chat />
+      </div>
     </div>
   )
 }
