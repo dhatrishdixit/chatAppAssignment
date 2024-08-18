@@ -5,6 +5,7 @@ import './index.css'
 import { ClerkProvider } from '@clerk/clerk-react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SignInPage from './auth/sign-in/index.tsx'
+import { ThemeProvider } from './components/custom/theme-provider.tsx'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY //for clerk
 
@@ -24,8 +25,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
         <RouterProvider router={router}/>
     </ClerkProvider>
+    </ThemeProvider>
   </StrictMode>,
 )
